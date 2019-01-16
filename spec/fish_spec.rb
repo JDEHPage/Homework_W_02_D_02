@@ -1,8 +1,6 @@
 require("minitest/autorun")
 require("minitest/rg")
 
-require_relative("../Bear")
-require_relative("../Fish")
 require_relative("../River")
 
 class TestFish < MiniTest::Test
@@ -15,6 +13,6 @@ class TestFish < MiniTest::Test
       @fish2 = Fish.new("Sam")
       @fish3 = Fish.new("Mike")
     end
-    
+
 
 end

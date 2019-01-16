@@ -8,12 +8,16 @@ require_relative("../River")
 class TestRiver < MiniTest::Test
 
   def setup
-      @river = River.new"Orange"
-      @bear = Bear.new("Yogi", "Grizzley")
+  #NOTE: This acts as the Arrange part of question setup.
 
+      @bear = Bear.new("Yogi", "Grizzley")
       @fish1 = Fish.new("Steven")
       @fish2 = Fish.new("Sam")
       @fish3 = Fish.new("Mike")
+
+      @river = River.new"Orange"
+      #or
+      # @river = River.new("Orange", [@fish1, @fish2, @fish2]) NOTE: This must come after fish have been created
     end
 
     def test_add_fish_to_river
